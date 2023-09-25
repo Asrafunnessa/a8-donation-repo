@@ -1,7 +1,7 @@
 const Logos = () => {
     return (
         <div className="w-40 h-auto">
-        <img src="../src/assets/logo.png" />
+        <img src="logo.png" />
       </div>
     );
 };
