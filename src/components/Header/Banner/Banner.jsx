@@ -1,7 +1,5 @@
 const Banner = () => {
     return (
-        // <div className="h-[70vh] bg-gray-200">
-        // </div>
         <div className="hero h-[70vh] bg-gray-200" style={{backgroundImage:'url(../src/assets/banner.png)'}}>
   <div className="hero-overlay bg-opacity-0"></div>
   <div className="hero-content text-center text-neutral-content">
