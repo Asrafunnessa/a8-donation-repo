@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 const DonationCard = ({category}) => {
 
-    const { image, title, description } = category || {}
+    const { image, title, description, category_name, price} = category || {}
 
     return (
         <div className="flex justify-center items-center h-[80vh]">
@@ -12,6 +13,20 @@ const DonationCard = ({category}) => {
                         alt="img-blur-shadow" className="w-full h-full object-cover" layout="fill"
                     />
                 </div>
+                <div className="p-6">
+                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                        {category_name}
+                    </h5>
+                    <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                        {title}
+                    </h5>
+                    <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                       ${price}
+                    </h5>
+                    <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                        {description}
+                    </p>
+                </div>
                 <div className="p-6 pt-0">
                     <button
                         // onClick={handleAddDonate}
@@ -19,16 +34,8 @@ const DonationCard = ({category}) => {
                         type="button"
                         data-ripple-light="true"
                     >
-                        Donate$290
+                        View Details
                     </button>
-                </div>
-                <div className="p-6">
-                    <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                        {title}
-                    </h5>
-                    <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                        {description}
-                    </p>
                 </div>
             </div>
             {/* <ToastContainer /> */}

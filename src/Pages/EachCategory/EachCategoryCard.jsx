@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const EachCategoryCard = ({ category }) => {
 
-    const { id, image, title, description } = category || {}
+    const { id, image, title, description, card_bg, text_bg } = category || {}
     const handleAddDonate = () => {
         const addedDonateArray = [];
         const donateCategory = JSON.parse(localStorage.getItem('donate'));
@@ -42,7 +42,7 @@ const EachCategoryCard = ({ category }) => {
 
     return (
         <div className="flex justify-center items-center h-[80vh]">
-            <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md justify-center">
+            <div style={{backgroundColor: `${card_bg}`}} className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md justify-center">
                 <div className="relative mx-4 -mt-6  h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
                     <img
                         src={image}
@@ -59,7 +59,7 @@ const EachCategoryCard = ({ category }) => {
                         Donate$290
                     </button>
                 </div>
-                <div className="p-6">
+                <div style={{color: `${text_bg}`}}  className="p-6">
                     <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                         {title}
                     </h5>

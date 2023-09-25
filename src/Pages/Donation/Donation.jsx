@@ -7,7 +7,7 @@ const Donation = () => {
     const [donation, setDonation] = useState([])
     const [noFound, setNoFound] = useState(false)
     const [isShow, setIsShow] = useState(false)
-    const [totalPrice, setTotalPrice] = useState(0)
+    const [totalDonation, setTotalDonation] = useState(0)
 
     useEffect(()=>{
         const donateCategory = JSON.parse(localStorage.getItem('donate'));
@@ -32,7 +32,7 @@ const Donation = () => {
     : 
     <div>
         <div>
-            <h1>Total Donation : {totalPrice}</h1>
+            {/* <h1>Total Donation : {totalDonation}</h1> */}
         </div>
         <div className="grid grid-cols-2">
             {
@@ -46,7 +46,7 @@ const Donation = () => {
             }
         </div>
         {donation.length > 4 && <button onClick={()=>setIsShow(!isShow)} className="px-5 bg-green-200 block mx-auto">
-            {isShow ? "See Less" : "See All"}
+            {isShow ? "See Less" : "See More"}
             </button>}
         </div>}</div>;
     
