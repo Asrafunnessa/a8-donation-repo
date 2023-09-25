@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 const DonationCard = ({category}) => {
 
-    const { id, image, title, description } = category || {}
+    const { image, title, description } = category || {}
 
     return (
         <div className="flex justify-center items-center h-[80vh]">

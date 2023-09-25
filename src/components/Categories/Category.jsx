@@ -6,7 +6,12 @@ import { Link } from 'react-router-dom';
 const Category = ({ category }) => {
 
 
-    const { id, image, category_name, title, } = category || {}
+    const { id, image, category_name, category_bg, card_bg, text_bg, title, } = category || {}
+
+    // const category_bg = {
+    //     backgroundColor: category_bg,
+    //     color: text_bg
+    // }
 
     return (
         <Link to={`/categories/${id}`}>
@@ -27,12 +32,8 @@ const Category = ({ category }) => {
                             <button className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
                                 {category_name}
                             </button>
-
-                            {/* <button className="px-5 py-2 font-extrabold border rounded border-[#7E90FE] mr-4 text-[#7E90FE]">
-                            {category_name}
-                        </button> */}
                         </div>
-                        <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                        <p  className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
                             {title}
                         </p>
                     </div>
