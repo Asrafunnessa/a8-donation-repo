@@ -3,6 +3,9 @@
       "id": "1",
       "image": "https://i.ibb.co/WFQZk17/Rectangle-4284.png",
       "category_name": "Health",
+      "category_bg_color": "#3498db",
+      "card_bg_color": "#ecf0f1",
+      "text_button_bg_color": "#2ecc71",
       "title": "Clean Water for Families",
       "price": 499.99,
       "description": "Provide clean and safe drinking water to families in need."
