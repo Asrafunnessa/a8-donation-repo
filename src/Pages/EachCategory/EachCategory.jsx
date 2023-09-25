@@ -1,19 +1,31 @@
-// import { useState } from "react";
+/* eslint-disable no-undef */
+/* eslint-disable react/no-unknown-property */
+import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import EachCategoryCard from "./EachCategoryCard";
 
 const EachCategory = () => {
 
-    // const [EachCategory, setEachCategory] = useState();
+    const [eachCategory, setEachCategory] = useState({});
 
-    const params = useParams()
-    console.log(params);
+
+    const { id } = useParams()
 
     const categories = useLoaderData()
-    console.log(categories);
+
+
+    useEffect(() => {
+
+        const findCategory = categories?.find(category => category.id === id)
+        setEachCategory(findCategory)
+    }, [id, categories])
+
+    console.log(eachCategory);
+
 
     return (
         <div>
-            <h1>Category</h1>
+           <EachCategoryCard category={eachCategory}></EachCategoryCard>
         </div>
     );
 };
